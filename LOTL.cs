@@ -34,7 +34,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("LOTL", "RFC1920", "1.0.1")]
+    [Info("LOTL", "RFC1920", "1.0.2")]
     [Description("Living off the loot!")]
     internal class LOTL : RustPlugin
     {
