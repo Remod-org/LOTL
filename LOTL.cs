@@ -34,7 +34,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("LOTL", "RFC1920", "1.0.2")]
+    [Info("LOTL", "RFC1920", "1.0.3")]
     [Description("Living off the loot!")]
     internal class LOTL : RustPlugin
     {
@@ -169,7 +169,7 @@ namespace Oxide.Plugins
 
         private object OnEntityTakeDamage(BaseCombatEntity entity, HitInfo hitinfo)
         {
-            if (hitinfo.damageTypes.GetMajorityDamageType() == DamageType.Decay) return true;
+            if (hitinfo.damageTypes.GetMajorityDamageType() == DamageType.Decay && !configData.allowDecay) return true;
 
             BasePlayer player = hitinfo.Initiator as BasePlayer;
             if (player == null) return null;
@@ -203,6 +203,7 @@ namespace Oxide.Plugins
             public bool debug;
             public bool seedPlayers;
             public bool allowAdmin;
+            public bool allowDecay;
             public VersionNumber Version;
         }
 

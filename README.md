@@ -4,7 +4,7 @@
 
 See his OLD series starting with https://www.youtube.com/watch?v=X6_ldOgxCw0
 
-This is intended to be run as the ONLY plugin for PVP.  It will prevent decay since resources are so rare to obtain.  If configured, a small number of players will randomly be issued bypass permissions allowing the abililty to obtain resources such as wood and stone.  Also, by default, admins can also gather resources.
+This is intended to be run as the ONLY plugin for PVP.  It will prevent decay by default since resources are so rare to obtain.  If configured, a small number of players will randomly be issued bypass permissions allowing the abililty to obtain resources such as wood and stone.  Also, by default, admins can also gather resources.
 
  - The bypass permission will only last while they are connected.
  - The permission will only be granted to UP TO 10% of the current active players.
@@ -22,10 +22,11 @@ Otherwise:
   "debug": false,
   "seedPlayers": true,
   "allowAdmin": true,
+  "allowDecay": false,
   "Version": {
     "Major": 1,
     "Minor": 0,
-    "Patch": 1
+    "Patch": 3
   }
 }
 ```
