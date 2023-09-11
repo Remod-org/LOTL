@@ -8,6 +8,7 @@ This is intended to be run as the ONLY plugin for PVP.  It will prevent decay by
 
  - The bypass permission will only last while they are connected.
  - The permission will only be granted to UP TO 10% of the current active players.
+ - Players who get the bypass permission will be notified.
 
 Otherwise:
 
@@ -26,7 +27,7 @@ Otherwise:
   "Version": {
     "Major": 1,
     "Minor": 0,
-    "Patch": 3
+    "Patch": 4
   }
 }
 ```

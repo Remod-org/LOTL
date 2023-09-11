@@ -34,7 +34,7 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("LOTL", "RFC1920", "1.0.3")]
+    [Info("LOTL", "RFC1920", "1.0.4")]
     [Description("Living off the loot!")]
     internal class LOTL : RustPlugin
     {
@@ -54,7 +54,8 @@ namespace Oxide.Plugins
         {
             lang.RegisterMessages(new Dictionary<string, string>
             {
-                ["notauthorized"] = "You don't have permission to do that !!"
+                ["notauthorized"] = "You don't have permission to do that !!",
+                ["yougather"] = "You are a gatherer for this session!"
             }, this);
         }
 
@@ -123,6 +124,7 @@ namespace Oxide.Plugins
                 permission.GrantUserPermission(player?.UserIDString, permBypass, this);
                 canBypass.Remove(player.userID);
                 canBypass.Add(player.userID, player.displayName);
+                Message(player.IPlayer, "yougather");
                 return;
             }
             DoLog($"Removing bypass permission from {player.displayName}");
